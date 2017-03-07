@@ -1,1 +1,11 @@
 /* CSS declarations go here */
+navbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+navbar item{
+    background-color: #dddeed;
+    padding: 8px;
+}
