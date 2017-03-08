@@ -1,4 +1,9 @@
-/* CSS declarations go here */
+/*BODY declarations go here */
+body{
+  background-color: green;
+}
+
+/* NAVBAR declarations go here */
 navbar{
   list-style-type: none;
   margin: 0;
@@ -8,4 +13,48 @@ navbar{
 navbar item{
     background-color: #dddeed;
     padding: 8px;
+}
+/* HOME declarations go here */
+home{}
+home buttons{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+home buttons item{
+  display: inline;
+  padding: 8px;
+}
+home buttons item label{
+  display: block;
+  background-color: #dddeed;
+  text-align: center;
+}
+/* CHARACTER declarations go here */
+chars{
+  background-color: red;
+  text-align: center;
+}
+
+chars labels{
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 5px;
+  width: 100%;
+  display: block;
+}
+chars labels stats{
+  border: solid;
+  display: inline-flex;
+  padding: 0 2.5% 0;
+  height: 20px;
+  width: 10%;
+  overflow: hidden;
+ }
+chars labels item{
+  border-bottom: solid;
+  display: inline-flex;
+  padding: 0 2.5% 0;
+  width: 10%;
 }

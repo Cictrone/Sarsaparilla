@@ -1,0 +1,50 @@
+<template name = "characters">
+<chars>
+    {{> navbar}}
+<h1>CHARACTERS</h1>
+<labels>
+  <item>Name</item>
+  <item>Status</item>
+  <item>Realm</item>
+  <item>Campaign</item>
+  <item>Health</item>
+</labels>
+{{#each char_list}}
+<labels>
+  <stats>-{{name}}-</stats>
+  <stats>-{{status}}-</stats>
+  <stats>-{{realm}}-</stats>
+  <stats>-{{campaign}}-</stats>
+  <stats>-{{health}}-</stats>
+</labels>
+{{/each}}
+<h1><a href="" id="createChar">Create New Character</a></h1>
+</chars>
+</template>
+
+<template name ="createChar">
+  {{> navbar}}
+
+<ul>
+<form id= "newChar">
+  <li>
+    Name : <input name="name" />
+  </li>
+  <li>
+    Status : <input name="status"/>
+  </li>
+  <li>
+    Realm : <input name="realm"/>
+  </li>
+  <li>
+    Campaign : <input name="campaign"/>
+  </li>
+  <li>
+    Health : <input name="health" />
+  </li>
+  <li>
+    <input type=submit value="ROLL!"/>
+  </li>
+</form>
+</ul>
+</template>

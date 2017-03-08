@@ -1,22 +1,20 @@
 import { Template } from 'meteor/templating';
+import { Session } from 'meteor/session';
+import { Mongo } from 'meteor/mongo';
 import { ReactiveVar } from 'meteor/reactive-var';
 
+Characters = new Mongo.Collection('characters');
+Campaigns = new Mongo.Collection('campaigns');
+Realms = new Mongo.Collection('realms');
+Monsters = new Mongo.Collection('monsters');
+Spells = new Mongo.Collection('spells');
+Equipment = new Mongo.Collection('equipment');
+
 import './main.html';
+Session.setDefault('prompt',"home");
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
-
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
-});
-
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
+Template.body.helpers({
+  promptPage() {
+    return Session.get('prompt');
   },
 });
