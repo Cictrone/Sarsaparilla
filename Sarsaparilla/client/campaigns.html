@@ -1,6 +1,18 @@
 <template name = "campaigns">
+<chars>
   {{> navbar}}
 
-<h1>CAMPAIGNS</h1>
+  <h1>CAMPAIGNS</h1>
 
+<labels>
+  <item>Name</item>
+  <item>Date Created</item>
+</labels>
+{{#each camp_list}}
+<labels>
+  <stats>-{{name}}-</stats>
+  <stats>-{{date}}-</stats>
+</labels>
+{{/each}}
+</chars>
 </template>

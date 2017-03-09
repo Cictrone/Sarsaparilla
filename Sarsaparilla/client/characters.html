@@ -14,12 +14,12 @@
   <stats>-{{name}}-</stats>
   <stats>-{{status}}-</stats>
   <stats>-{{realm.name}}-</stats>
-  <stats>-{{campaign}}-</stats>
+  <stats>-{{campaign.name}}-</stats>
   <stats>-{{health}}-</stats>
 </labels>
 {{/each}}
-<button id="createChar">Create New Character</button>
 </chars>
+<button id="createChar">Create New Character</button>
 </template>
 
 <template name ="createChar">
@@ -39,10 +39,22 @@
         <div id="chosenRealm" class="item">{{name}}</div>
         {{/each}}
       </div>
+    </div>
+
+
+    <div class="ui simple dropdown item">
+      {{selected_camp}}
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each camp_list}}
+        <div id="chosenCamp" class="item">{{name}}</div>
+        {{/each}}
+      </div>
     </div><br />
 
 
-    Campaign : <input name="campaign"/><br />
+
+
     Health : <input name="health" /><br />
     <input type=submit value="ROLL!"/>
 </form>

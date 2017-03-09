@@ -12,10 +12,13 @@ Meteor.startup(() => {
   // code to run on server at startup
   realms.remove({});
   characters.remove({});
-  realms.insert(
-    {
+  campaigns.remove({});
+  realms.insert({
       name: "Test Realm",
       lore: "Lorem Ipsum ;)",
-    }
-  );
+  });
+  campaigns.insert({
+      name: "Test Campaign",
+      date: moment(new Date()).format("MM.DD.YYYY"),
+  });
 });
