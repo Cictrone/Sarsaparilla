@@ -10,6 +10,12 @@ Monsters = new Mongo.Collection('monsters');
 Spells = new Mongo.Collection('spells');
 Equipment = new Mongo.Collection('equipment');
 
+var imageStore = new FS.Store.GridFS("images");
+
+Images = new FS.Collection("images", {
+ stores: [imageStore]
+});
+
 toastr.options = {
   "closeButton": true,
   "debug": false,

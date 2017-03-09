@@ -1,0 +1,20 @@
+<!-- MUST BE CALLED WITH A CHARACTER -->
+
+<template name="charCard">
+  <div style="text-align: center" class="ui centered card">
+    <a class="image" href="#" id="changePic">
+      {{#if hasProfilePic}}
+        <img src="{{profilePic.url store='images' uploading='person.png' storing='person.png'}}" alt="" class="thumbnail" />
+      {{else}}
+        <img src="person.png" />
+      {{/if}}
+    </a>
+    <div class="content">
+      <a class="header" href="#">{{name}}</a>
+      <div class="meta">
+        <a>Status: {{status}}</a>
+      </div>
+    </div>
+  </div>
+  <input type="file" id="myPicInput" accept="image/*" style="display: none;"><br />
+</template>

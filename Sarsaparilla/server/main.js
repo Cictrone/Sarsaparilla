@@ -8,6 +8,14 @@ monsters = new Mongo.Collection('monsters');
 spells = new Mongo.Collection('spells');
 equipment = new Mongo.Collection('equipment');
 
+
+var imageStore = new FS.Store.GridFS("images");
+
+
+Images = new FS.Collection("images", {
+ stores: [imageStore]
+});
+
 Meteor.startup(() => {
   // code to run on server at startup
   realms.remove({});

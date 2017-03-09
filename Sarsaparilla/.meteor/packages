@@ -31,3 +31,7 @@ semantic:ui
 juliancwirko:postcss
 less
 semantic:ui-menu
+cfs:gridfs
+iyyang:cfs-aliyun
+cfs:standard-packages
+semantic:ui-card

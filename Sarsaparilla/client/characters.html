@@ -1,25 +1,9 @@
 <template name = "characters">
-<chars>
-    {{> navbar}}
-<h1>CHARACTERS</h1>
-<labels>
-  <item>Name</item>
-  <item>Status</item>
-  <item>Realm</item>
-  <item>Campaign</item>
-  <item>Health</item>
-</labels>
-{{#each char_list}}
-<labels>
-  <stats>-{{name}}-</stats>
-  <stats>-{{status}}-</stats>
-  <stats>-{{realm.name}}-</stats>
-  <stats>-{{campaign.name}}-</stats>
-  <stats>-{{health}}-</stats>
-</labels>
-{{/each}}
-</chars>
-<button id="createChar">Create New Character</button>
+  {{> navbar}}
+  <button id="createChar">Create New Character</button>
+  {{#each char_list}}
+    {{> charCard}}
+  {{/each}}
 </template>
 
 <template name ="createChar">
