@@ -1,9 +1,18 @@
 <template name = "characters">
   {{> navbar}}
-  <button id="createChar">Create New Character</button>
+  <div class="ui link cards">
   {{#each char_list}}
     {{> charCard}}
   {{/each}}
+  <div style="text-align: center" class="ui card">
+    <a class="image" href="#" id="createChar">
+        <img src="new-char.jpg" />
+    </a>
+    <div class="content">
+      <a class="header" href="#">Add a New Character!</a>
+    </div>
+  </div>
+</div>
 </template>
 
 <template name ="createChar">
