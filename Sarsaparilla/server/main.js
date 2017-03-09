@@ -21,4 +21,17 @@ Meteor.startup(() => {
       name: "Test Campaign",
       date: moment(new Date()).format("MM.DD.YYYY"),
   });
+  characters.insert({
+    name: "Thorin Frostbeard",
+    status: "Tired",
+    realm: {
+      name: "Test Realm",
+      lore: "Lorem Ipsum ;)",
+    },
+    campaign: {
+      name: "Test Campaign",
+      date: moment(new Date()).format("MM.DD.YYYY"),
+    },
+    health: 120,
+  });
 });

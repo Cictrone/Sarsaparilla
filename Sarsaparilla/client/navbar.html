@@ -1,9 +1,29 @@
 <template name="navbar">
-    <navbar>
-      <item id = "home">Home</item>
-      <item id = "characters">Characters</item>
-      <item id = "campaigns">Campaigns</item>
-      <item id = "realms">Realms</item>
-      <item id = "misc">Misc.</item>
-    </navbar>
+    <div class="ui fluid five item menu">
+      {{#if isHome}}
+      <a id="home" class="active item">Home</a>
+      {{else}}
+      <a id="home" class="item">Home</a>
+      {{/if}}
+      {{#if isCharacters}}
+      <a id="characters" class="active item">Characters</a>
+      {{else}}
+      <a id="characters" class="item">Characters</a>
+      {{/if}}
+      {{#if isCampaigns}}
+      <a id="campaigns" class="active item">Campaigns</a>
+      {{else}}
+      <a id="campaigns" class="item">Campaigns</a>
+      {{/if}}
+      {{#if isRealms}}
+      <a id="realms" class="active item">Realms</a>
+      {{else}}
+      <a id="realms" class="item">Realms</a>
+      {{/if}}
+      {{#if isMisc}}
+      <a id="misc" class="active item">Misc.</a>
+      {{else}}
+      <a id="misc" class="item">Misc.</a>
+      {{/if}}
+    </div>
 </template>

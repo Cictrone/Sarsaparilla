@@ -15,4 +15,21 @@
 </labels>
 {{/each}}
 </chars>
+<button id="createRealm">Create New Realm</button>
+</template>
+
+
+<template name ="createRealm">
+  <chars>
+    {{> navbar}}
+  </chars>
+
+<div style="margin-top: 10%">
+<form id= "newRealm">
+    Name : <input name="name" /><br />
+    Lore : <input name="lore"/><br />
+
+    <input type=submit value="ROLL!"/>
+</form>
+</div>
 </template>

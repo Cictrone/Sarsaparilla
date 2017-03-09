@@ -1,3 +1,21 @@
+Template.navbar.helpers({
+  isHome(){
+    return "home"==Session.get("prompt");
+  },
+  isCharacters(){
+    return "characters"==Session.get("prompt");
+  },
+  isCampaigns(){
+    return "campaigns"==Session.get("prompt");
+  },
+  isRealms(){
+    return "realms"==Session.get("prompt");
+  },
+  isMisc(){
+    return "misc"==Session.get("prompt");
+  },
+});
+
 Template.navbar.events({
   'click #home'(event){
     event.preventDefault();

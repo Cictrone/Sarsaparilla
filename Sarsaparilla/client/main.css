@@ -1,39 +1,6 @@
-/*BODY declarations go here */
-body{
-  background-color: green;
-}
 
-/* NAVBAR declarations go here */
-navbar{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-navbar item{
-    background-color: #dddeed;
-    padding: 8px;
-}
-/* HOME declarations go here */
-home{}
-home buttons{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-home buttons item{
-  display: inline;
-  padding: 8px;
-}
-home buttons item label{
-  display: block;
-  background-color: #dddeed;
-  text-align: center;
-}
 /* CHARACTER declarations go here */
 chars{
-  background-color: red;
   text-align: center;
 }
 
