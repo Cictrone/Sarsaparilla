@@ -1,6 +1,18 @@
 <template name = "realms">
+<chars>
   {{> navbar}}
 
 <h1>REALMS</h1>
 
+<labels>
+  <item>Name</item>
+  <item>Lore</item>
+</labels>
+{{#each realm_list}}
+<labels>
+  <stats>-{{name}}-</stats>
+  <stats>-{{lore}}-</stats>
+</labels>
+{{/each}}
+</chars>
 </template>

@@ -46,7 +46,6 @@ chars labels{
 }
 chars labels stats{
   border: solid;
-  display: inline-flex;
   padding: 0 2.5% 0;
   height: 20px;
   width: 10%;

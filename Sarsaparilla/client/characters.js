@@ -2,6 +2,17 @@ Template.characters.helpers({
   char_list(){return Characters.find({}).fetch();},
 });
 
+Template.createChar.helpers({
+  realm_list(){return Realms.find({}).fetch();},
+  camp_list(){return Campaigns.find({}).fetch();},
+  selected_realm(){
+    if (Session.get("chosenRealm")){
+      return Session.get("chosenRealm");
+    }
+    return "Realms";
+  }
+});
+
 Template.characters.events({
   'click #createChar'(event){
 		event.preventDefault();
@@ -18,7 +29,7 @@ Template.createChar.events({
           user_Id: Meteor.user(),
           name: event.target.name.value,
           status: event.target.status.value,
-          realm: event.target.realm.value,
+          realm: Realms.findOne({name: Session.get("chosenRealm")}),
           campaign: event.target.campaign.value,
           health: event.target.health.value,
         }},
@@ -26,4 +37,8 @@ Template.createChar.events({
       );
     Session.set('prompt', 'characters');
   },
+  'click  #chosenRealm': function(event) {
+    event.preventDefault();
+    Session.set("chosenRealm", event.target.innerText);
+  }
 });

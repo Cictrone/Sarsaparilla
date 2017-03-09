@@ -10,5 +10,12 @@ equipment = new Mongo.Collection('equipment');
 
 Meteor.startup(() => {
   // code to run on server at startup
-
+  realms.remove({});
+  characters.remove({});
+  realms.insert(
+    {
+      name: "Test Realm",
+      lore: "Lorem Ipsum ;)",
+    }
+  );
 });

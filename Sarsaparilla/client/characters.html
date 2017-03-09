@@ -13,38 +13,38 @@
 <labels>
   <stats>-{{name}}-</stats>
   <stats>-{{status}}-</stats>
-  <stats>-{{realm}}-</stats>
+  <stats>-{{realm.name}}-</stats>
   <stats>-{{campaign}}-</stats>
   <stats>-{{health}}-</stats>
 </labels>
 {{/each}}
-<h1><a href="" id="createChar">Create New Character</a></h1>
+<button id="createChar">Create New Character</button>
 </chars>
 </template>
 
 <template name ="createChar">
   {{> navbar}}
 
-<ul>
+<div style="margin-top: 10%">
 <form id= "newChar">
-  <li>
-    Name : <input name="name" />
-  </li>
-  <li>
-    Status : <input name="status"/>
-  </li>
-  <li>
-    Realm : <input name="realm"/>
-  </li>
-  <li>
-    Campaign : <input name="campaign"/>
-  </li>
-  <li>
-    Health : <input name="health" />
-  </li>
-  <li>
+    Name : <input name="name" /><br />
+    Status : <input name="status"/><br />
+
+
+    <div class="ui simple dropdown item">
+      {{selected_realm}}
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each realm_list}}
+        <div id="chosenRealm" class="item">{{name}}</div>
+        {{/each}}
+      </div>
+    </div><br />
+
+
+    Campaign : <input name="campaign"/><br />
+    Health : <input name="health" /><br />
     <input type=submit value="ROLL!"/>
-  </li>
 </form>
-</ul>
+</div>
 </template>
