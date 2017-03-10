@@ -1,7 +1,6 @@
 <template name = "characters">
   {{> navbar}}
-  <div style="text-align:center">
-  <div class="ui link cards">
+  <div class="ui link centered cards">
     {{#each char_list}}
       {{> charCard}}
     {{/each}}
@@ -14,7 +13,6 @@
       </div>
     </div>
   </div>
-  </div>
 </template>
 
 <template name ="createChar">
@@ -25,8 +23,6 @@
 <div style="margin-top: 10%">
 <form id= "newChar">
     Name : <input name="name" /><br />
-    Status : <input name="status"/><br />
-
 
     <div class="ui simple dropdown item">
       {{selected_realm}}

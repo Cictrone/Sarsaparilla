@@ -1,18 +1,18 @@
-<!-- MUST BE CALLED WITH A CHARACTER -->
+<!-- MUST BE CALLED WITH A Realm -->
 
-<template name="charCard">
-  <div id={{charCardID}} style="text-align: center" class="ui card">
+<template name="realmCard">
+  <div id={{realmCardID}} style="text-align: center" class="ui card">
     <a class="image" href="#" id="changePic">
       {{#if hasProfilePic}}
-        <img src="{{profilePic.url store='images' uploading='person.png' storing='person.png'}}" alt="" class="thumbnail" />
+        <img src="{{profilePic.url store='images' uploading='realm.jpg' storing='realm.jpg'}}" alt="" class="thumbnail" />
       {{else}}
-        <img src="person.png" />
+        <img src="realm.jpg" />
       {{/if}}
     </a>
     <div class="content">
       <a class="header" href="#">{{name}}</a>
       <div class="meta">
-        <a>Status: {{{getStatus}}}</a>
+        <a>Lore: {{{lore}}}</a>
       </div>
     </div>
   </div>

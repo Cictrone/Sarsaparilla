@@ -18,6 +18,7 @@ Images = new FS.Collection("images", {
 
 Meteor.startup(() => {
   // code to run on server at startup
+  Images.remove({});
   realms.remove({});
   characters.remove({});
   campaigns.remove({});
@@ -31,7 +32,7 @@ Meteor.startup(() => {
   });
   characters.insert({
     name: "Thorin Frostbeard",
-    status: "Tired",
+    status: true, // false is dead true is alive
     realm: {
       name: "Test Realm",
       lore: "Lorem Ipsum ;)",

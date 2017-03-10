@@ -1,18 +1,18 @@
-<!-- MUST BE CALLED WITH A CHARACTER -->
+<!-- MUST BE CALLED WITH A CAMPAIGN -->
 
-<template name="charCard">
-  <div id={{charCardID}} style="text-align: center" class="ui card">
+<template name="campCard">
+  <div id={{campCardID}} style="text-align: center" class="ui card">
     <a class="image" href="#" id="changePic">
       {{#if hasProfilePic}}
-        <img src="{{profilePic.url store='images' uploading='person.png' storing='person.png'}}" alt="" class="thumbnail" />
+        <img src="{{profilePic.url store='images' uploading='campaign.jpg' storing='campaign.jpg'}}" alt="" class="thumbnail" />
       {{else}}
-        <img src="person.png" />
+        <img src="campaign.jpg" />
       {{/if}}
     </a>
     <div class="content">
       <a class="header" href="#">{{name}}</a>
       <div class="meta">
-        <a>Status: {{{getStatus}}}</a>
+        <a>Date Created: {{{date}}}</a>
       </div>
     </div>
   </div>

@@ -37,4 +37,8 @@ Template.navbar.events({
     event.preventDefault();
     Session.set('prompt', 'misc');
   },
+  'click #logout'(event){
+		event.preventDefault();
+    Meteor.logout();
+  },
 });

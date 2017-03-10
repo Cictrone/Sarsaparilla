@@ -1,21 +1,18 @@
 <template name = "campaigns">
-<chars>
   {{> navbar}}
-
-  <h1>CAMPAIGNS</h1>
-
-<labels>
-  <item>Name</item>
-  <item>Date Created</item>
-</labels>
-{{#each camp_list}}
-<labels>
-  <stats>-{{name}}-</stats>
-  <stats>-{{date}}-</stats>
-</labels>
-{{/each}}
-</chars>
-<button id="createCampaign">Create New Campaign</button>
+  <div class="ui link centered cards">
+    {{#each camp_list}}
+      {{> campCard}}
+    {{/each}}
+    <div style="text-align: center" class="ui card">
+      <a class="image" href="#" id="createCampaign">
+          <img src="new-camp.jpg" />
+      </a>
+      <div class="content">
+        <a class="header" href="#">Add a New Campaign!</a>
+      </div>
+    </div>
+  </div>
 </template>
 
 

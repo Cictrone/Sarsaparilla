@@ -46,7 +46,7 @@ Template.createChar.events({
           {$set:{
             user_Id: Meteor.user(),
             name: event.target.name.value,
-            status: event.target.status.value,
+            status: true,
             realm: Realms.findOne({name: Session.get("chosenRealm")}),
             campaign: Campaigns.findOne({name: Session.get("chosenCamp")}),
             health: event.target.health.value,

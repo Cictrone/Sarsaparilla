@@ -1,4 +1,4 @@
-Template.charCard.helpers({
+Template.realmCard.helpers({
   profilePic(){
     return Images.findOne({'_id': this.profile.image});
   },
@@ -8,18 +8,12 @@ Template.charCard.helpers({
     }
     return false;
   },
-  charCardID(){
-    return "charCard-"+this._id;
-  },
-  getStatus(){
-    if(this.status){
-      return '<i class="add circle icon"></i>';
-    }
-    return '<i class="remove circle icon"></i>';
+  realmCardID(){
+    return "realmCard-"+this._id;
   },
 });
 
-Template.charCard.events({
+Template.realmCard.events({
    'change #myPicInput' (event){
      var that = this;
       FS.Utility.eachFile(event, function(file) {
@@ -34,7 +28,7 @@ Template.charCard.events({
               // removes old pic from db
               Images.remove({_id: this.profile.image});
             }
-            Characters.update(that._id, {$set: imagesURL});
+            Realms.update(that._id, {$set: imagesURL});
           }
         });
      });
@@ -42,7 +36,7 @@ Template.charCard.events({
    'click #changePic'(event){
      if(Meteor.userId()){ //if logged in
        //The folowwing will make sure we change the correct card picture
-       $('#charCard-'+this._id)[0].nextElementSibling.click();
+       $('#realmCard-'+this._id)[0].nextElementSibling.click();
      }
    },
 });

@@ -35,3 +35,4 @@ cfs:gridfs
 iyyang:cfs-aliyun
 cfs:standard-packages
 semantic:ui-card
+semantic:ui-icon

@@ -1,21 +1,18 @@
 <template name = "realms">
-<chars>
   {{> navbar}}
-
-<h1>REALMS</h1>
-
-<labels>
-  <item>Name</item>
-  <item>Lore</item>
-</labels>
-{{#each realm_list}}
-<labels>
-  <stats>-{{name}}-</stats>
-  <stats>-{{lore}}-</stats>
-</labels>
-{{/each}}
-</chars>
-<button id="createRealm">Create New Realm</button>
+  <div class="ui link centered cards">
+    {{#each realm_list}}
+      {{> realmCard}}
+    {{/each}}
+    <div style="text-align: center" class="ui card">
+      <a class="image" href="#" id="createRealm">
+          <img src="new-realm.jpg" />
+      </a>
+      <div class="content">
+        <a class="header" href="#">Add a New Realm!</a>
+      </div>
+    </div>
+  </div>
 </template>
 
 
