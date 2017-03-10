@@ -1,7 +1,7 @@
 <!-- MUST BE CALLED WITH A CHARACTER -->
 
 <template name="charCard">
-  <div style="text-align: center" class="ui card">
+  <div id={{charCardID}} style="text-align: center" class="ui card">
     <a class="image" href="#" id="changePic">
       {{#if hasProfilePic}}
         <img src="{{profilePic.url store='images' uploading='person.png' storing='person.png'}}" alt="" class="thumbnail" />

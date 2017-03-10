@@ -8,6 +8,9 @@ Template.charCard.helpers({
     }
     return false;
   },
+  charCardID(){
+    return "charCard-"+this._id;
+  }
 });
 
 Template.charCard.events({
@@ -29,7 +32,8 @@ Template.charCard.events({
    },
    'click #changePic'(event){
      if(Meteor.userId()){ //if logged in
-       $('#myPicInput').click();
+       //The folowwing will make sure we change the correct card picture
+       $('#charCard-'+this._id)[0].nextElementSibling.click();
      }
    }
 });
